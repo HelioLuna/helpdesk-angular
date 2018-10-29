@@ -1,5 +1,5 @@
 import { HELP_DESK_API } from './helpdesk.api';
-import { User } from './../model/user.model';
+import { User } from '../model/user/user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 

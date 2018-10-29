@@ -1,14 +1,15 @@
-<app-header></app-header>
-<app-menu></app-menu>
+<app-header [hidden]='!showTemplate'></app-header>
+<app-menu [hidden]='!showTemplate'></app-menu>
 
-<div class="content-wrapper">
+<div [ngClass]="showContentWrapper()">
+    
     <section class="content-header">      
     </section>
 
     <!-- Main content -->
     <section class="content">
-        <p>Content here ...</p>
+        <router-outlet></router-outlet>
     </section>
 </div>
 
-<app-footer></app-footer>
+<app-footer [hidden]="!showTemplate"></app-footer>
