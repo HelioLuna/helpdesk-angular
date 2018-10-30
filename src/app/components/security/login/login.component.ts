@@ -1,5 +1,5 @@
-import { User } from './../../../model/user/user';
-import { SettingsService } from './../../../services/settings.service';
+import { User } from '../../../model/user/user';
+import { SettingsService } from '../../../services/settings.service';
 import { UserService } from '../../../services/user.service';
 import { CurrentUser } from '../../../model/currentUser/currentUser';
 

@@ -1,3 +1,4 @@
+import { DialogService } from './dialog.service';
 import { AuthInterceptor } from './components/security/auth.interceptor';
 import { SettingsService } from './services/settings.service';
 import { UserService } from './services/user.service';
@@ -14,6 +15,8 @@ import { routes } from './app.routes';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthGuard } from './components/security/auth.guard';
+import { UserNewComponent } from './components/user-new/user-new.component';
+import { UserListComponent } from './components/user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { AuthGuard } from './components/security/auth.guard';
     MenuComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    UserNewComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,8 @@ import { AuthGuard } from './components/security/auth.guard';
     },
     UserService, 
     SettingsService,
-    AuthGuard
+    AuthGuard,
+    DialogService
   ],
     bootstrap: [AppComponent]
 })

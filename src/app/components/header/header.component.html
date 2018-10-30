@@ -1,19 +1,14 @@
 <header class="main-header">
-
-  <a href="index2.html" class="logo">
+  <a [routerLink]="['/']" class="logo">
     <span class="logo-mini"><b>Help</b></span>
     <span class="logo-lg"><b>Help Desk</b></span>
   </a>
-
   <nav class="navbar navbar-static-top">
     <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
       <span class="sr-only">Toggle navigation</span>
     </a>
-
-    <!-- Navbar Right Menu -->
     <div class="navbar-custom-menu">
-      <p style="color: white">helio@gmail.com - admin - <button>LOGOUT</button></p>
+        <p style="color:white">{{ settings.user.email }} - {{ settings.user.profile }} |  <button class="btn btn-link" (click)="signOut()"><font style="color:white">Sign out</font></button></p>
     </div>
-
   </nav>
 </header>

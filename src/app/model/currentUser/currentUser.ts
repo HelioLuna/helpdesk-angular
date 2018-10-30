@@ -1,4 +1,4 @@
-import { User } from './../user/user';
+import { User } from '../user/user';
 
 export class CurrentUser {
     public token: string;
